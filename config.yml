@@ -1,0 +1,10 @@
+external1:
+  low: 10
+  medium: 15
+  high: 20
+    
+external2:
+  scenario1: 1.0
+  scenario2: 1.5
+  scenario3: 2.0
+

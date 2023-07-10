@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <link rel="stylesheet" href="css/external/nouislider.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/nouislider-custom.css" />
+
+    <title>Sample Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <img class="logo" src="assets/png/logo_256.ico" alt="Company Logo" />
+        <h1>
+          <span class="title upper">Company Name</span>
+          <span class="title">Sample Calculator</span>
+        </h1>
+      </div>
+      <div class="main-content-container">
+        <div class="input-container">
+          <form>
+            <fieldset>
+              <legend class="label">Base Value</legend>
+              <div class="input-box">
+                <span class="input-box-prefix">$</span>
+                <input type="number" id="base-value" name="base-value" min="0" max="200000" step="1000" placeholder="" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="label">Radio Values</legend>
+              <div class="radio-button-container">
+                <label><input type="radio" name="sample-radio-values" value="low" tabindex="-1" /> Low</label>
+                <label><input type="radio" name="sample-radio-values" value="medium" tabindex="-1" /> Medium</label>
+                <label><input type="radio" name="sample-radio-values" value="high" tabindex="-1" /> High</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="label">Percentage Values</legend>
+              <div class="flex-row">
+                <div class="flex-column">
+                  <label for="percentage-one">Scenario 1:</label>
+                  <div class="input-container-percentage percentage-one-container">
+                    <div class="input-box-prefix">%</div>
+                    <input type="number" id="percentage-one" name="percentage-one" min="0" max="100" placeholder="" maxlenght="2" value="33" />
+                  </div>
+                </div>
+                <div class="flex-column">
+                  <label for="percentage-two">Scenario 2:</label>
+                  <div class="input-container-percentage percentage-two-container">
+                    <div class="input-box-prefix">%</div>
+                    <input type="number" id="percentage-two" name="percentage-two" min="0" max="100" placeholder="" value="33" />
+                  </div>
+                </div>
+                <div class="flex-column">
+                  <label for="percentage-three">Scenario 3:</label>
+                  <div class="input-container-percentage percentage-three-container">
+                    <div class="input-box-prefix">%</div>
+                    <input type="number" id="percentage-three" name="percentage-three" min="0" max="100" placeholder="" value="34" disabled />
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="label">Slider Value</legend>
+              <div class="slider-box">
+                <div class="slider-styled" id="slider-round" tabindex="-1"></div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="output-container">
+          <div class="output-item" id="output1">
+            <div class="output-title-container">
+              <img src="assets/icons/hourly_wage_icon.svg" alt="" />
+              <h3>Output 1</h3>
+            </div>
+            <div class="output-value-container">
+              <div class="output-value">$ -</div>
+            </div>
+          </div>
+          <div class="output-container-lower">
+            <div class="output-item" id="output2">
+              <h4>Output 2</h4>
+              <div class="output-value small">- hrs.</div>
+            </div>
+            <div class="output-item" id="output3">
+              <h4>Output 3</h4>
+              <div class="output-value small">$ -</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/external/nouislider.js"></script>
+    <script src="js/sliderImplementation.js"></script>
+    <script src="js/inputchangeEventlistener.js"></script>
+    <script src="js/outputUpdate.js"></script>
+    <script src="js/percentageAdjustments.js"></script>
+    <script src="js/listenerLog.js"></script>
+    <script src="js/baseValueAdjustments.js"></script>
+  </body>
+</html>

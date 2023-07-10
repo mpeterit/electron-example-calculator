@@ -1,0 +1,38 @@
+{
+  "name": "ElectronExampleCalculator",
+  "version": "1.0.0",
+  "description": "ElectronExampleCalculator serves as a template to demonstrate a fundamental calculator-like structure for processing user inputs. This project can serve as a foundation or starting point for developers venturing into the creation of Electron applications.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:windows": "electron-builder --windows",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "ElectronExampleCalculator",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./png/logo_256.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "./png/logo_256.ico",
+      "uninstallerIcon": "./png/logo_256.ico",
+      "uninstallDisplayName": "ElectronExampleCalculator Uninstaller",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": true,
+      "createStartMenuShortcut": false,
+      "runAfterFinish": false
+    }
+  },
+  "author": "Maxim Peter",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
